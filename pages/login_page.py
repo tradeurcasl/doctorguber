@@ -2,6 +2,7 @@ from .base_page import BasePage
 from .locators import BasePageLocators
 from selenium.webdriver.support import expected_conditions as EC
 import faker
+import time
 
 class LoginPage(BasePage):
     def should_be_login_button(self):
@@ -22,3 +23,13 @@ class LoginPage(BasePage):
     def should_be_personal(self):
         self.browser.find_element(*BasePageLocators.PERSONAL_CAB)
         assert True, "You are not log in user"
+
+    def should_be_registration_button(self):
+        self.browser.find_element(*BasePageLocators.REG_BUTTON)
+        assert True, "You are not log in user"
+
+    def should_be_registration_page(self):
+        button = self.browser.find_element(*BasePageLocators.REG_BUTTON)
+        button.click()
+        self.browser.find_element(*BasePageLocators.REG_PAGE)
+        assert True, "This is not registration page"
