@@ -33,6 +33,7 @@ class TestLoginForm():
         time.sleep(2)
         pagec.should_be_personal()
 
+
     def test_new_user_can_reg(self, browser):
         page = BasePage(browser, link)
         page.open()
@@ -43,5 +44,8 @@ class TestLoginForm():
         pagec.should_be_registration_button()
         time.sleep(1)
         pagec.should_be_registration_page()
+        pagec.should_be_reg()
+        time.sleep(2)
+        pagec.should_be_personal()
 
 

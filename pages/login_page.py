@@ -33,3 +33,25 @@ class LoginPage(BasePage):
         button.click()
         self.browser.find_element(*BasePageLocators.REG_PAGE)
         assert True, "This is not registration page"
+
+    def should_be_reg(self):
+        input1 = self.browser.find_element(*BasePageLocators.MAIL_REG)
+        f = faker.Faker()
+        email = f.email()
+        input1.send_keys(email)
+        time.sleep(1)
+        input2 = self.browser.find_element(*BasePageLocators.USER_PASS)
+        password = '159753'
+        input2.send_keys(password)
+        time.sleep(1)
+        input3 = self.browser.find_element(*BasePageLocators.NAME_REG)
+        name = f.name()
+        input3.send_keys(name)
+        time.sleep(1)
+        input4 = self.browser.find_element(*BasePageLocators.FAM_REG)
+        name = f.name()
+        time.sleep(1)
+        input4.send_keys(name)
+        button = self.browser.find_element(*BasePageLocators.BUTTON_REG)
+        button.click()
+        assert True, "Something go wrong"
