@@ -34,6 +34,8 @@ class LoginPage(BasePage):
         self.browser.find_element(*BasePageLocators.REG_PAGE)
         assert True, "This is not registration page"
 
+    '''Явное ожидание в этом тесте необходимо, т.к. если заполнять все формочки слишком быстро, сайт думает, 
+    что это авторизовывается бот (и в чем-то он прав)'''
     def should_be_reg(self):
         input1 = self.browser.find_element(*BasePageLocators.MAIL_REG)
         f = faker.Faker()
@@ -49,7 +51,6 @@ class LoginPage(BasePage):
         input3.send_keys(name)
         time.sleep(1)
         input4 = self.browser.find_element(*BasePageLocators.FAM_REG)
-        name = f.name()
         time.sleep(1)
         input4.send_keys(name)
         button = self.browser.find_element(*BasePageLocators.BUTTON_REG)
