@@ -8,4 +8,5 @@ class TestLoginForm():
         link = 'https://www.doctorguber.ru/'
         page = BasePage(browser, link)
         page.open()
+        time.sleep(3)
         page.should_be_login_button()
