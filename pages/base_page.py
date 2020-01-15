@@ -3,6 +3,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from .locators import BasePageLocators
 
 class BasePage():
 
@@ -15,12 +16,12 @@ class BasePage():
         self.browser.get(self.url)
 
     def go_to_login_page(self):
-        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
+        link = self.browser.find_element(*BasePageLocators.LOG_BUTTON)
         link.click()
 
     def go_to_cart(self, browser):
         self.browser = browser
-        link = self.browser.find_element(*BasePageLocators.CART_LINK)
+        link = self.browser.find_element(*BasePageLocators.LOG_BUTTON)
         link.click()
 
     def is_element_present(self, how, what, timeout=4):

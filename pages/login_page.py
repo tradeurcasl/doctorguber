@@ -8,7 +8,17 @@ class LoginPage(BasePage):
         self.browser.find_element(*BasePageLocators.LOG_BUTTON)
         assert True, "There is no login button"
 
-    def should_be_login_form(self):
-        button = self.browser.find_element(*LoginPageLocators.LOG_BUTTON)
+    def should_be_login(self):
+        input1 = self.browser.find_element(*BasePageLocators.USER_NAME)
+        login = 'k_n_ch@mail.ru'
+        input1.send_keys(login)
+        input2 = self.browser.find_element(*BasePageLocators.USER_PASS)
+        password = '159753'
+        input2.send_keys(password)
+        button = self.browser.find_element(*BasePageLocators.LOG_IN)
         button.click()
+        assert True, "Something go wrong"
 
+    def should_be_personal(self):
+        self.browser.find_element(*BasePageLocators.PERSONAL_CAB)
+        assert True, "You are not log in user"
