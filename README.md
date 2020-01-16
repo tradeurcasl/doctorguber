@@ -11,7 +11,7 @@ This pack includes:
   
   Login form works✔
   
-  Registration form work ✔
+  Registration form works ✔
   
 2) Test_product_page:
 
@@ -19,7 +19,7 @@ This pack includes:
   
   1-click purchase unregistered user ✔
   
-  Add to cart by registered user
+  Add to cart by registered user✔
   
   Add to cart by unregistered user
   
