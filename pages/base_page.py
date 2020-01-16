@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from .locators import BasePageLocators
 import time
-from random import randrange
 
 class BasePage():
 
@@ -18,9 +17,7 @@ class BasePage():
         self.browser.get(self.url)
 
     def product_from_popular_goods(self):
-        button = WebDriverWait(self.browser, 5).until(
-        EC.element_to_be_clickable((*BasePageLocators.SOME_POP_GOOD))
-        )
+        button = self.browser.find_element(*BasePageLocators.SOME_POP_GOOD)
         self.browser.execute_script("window.scrollBy(0, 500);")
         button.click()
 
