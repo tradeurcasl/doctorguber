@@ -51,3 +51,12 @@ class ProductPage(BasePage):
         time.sleep(1)
         self.browser.find_element(*ProductPageLocators.LIST_CART)
         assert True, 'There is no items'
+
+    def non_reg_user_can_good_to_cart(self):
+        button = self.browser.find_element(*ProductPageLocators.CART)
+        button.click()
+        button = self.browser.find_element(*ProductPageLocators.IN_CART)
+        button.click()
+        time.sleep(1)
+        self.browser.find_element(*ProductPageLocators.LIST_CART)
+        assert True, 'There is no items'

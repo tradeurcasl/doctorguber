@@ -32,11 +32,15 @@ class TestProductCart():
         page.should_buy_by_oneclick_new()
 
     def test_reg_user_can_add_good_to_cart(self, browser):
-        page = BasePage(browser, link)
+        page = LoginPage(browser, link)
         page.open()
         page.go_to_login_page()
-        page = LoginPage(browser, link)
         page.should_be_login()
         page.should_be_personal()
         page = ProductPage(browser, link)
         page.reg_user_can_good_to_cart()
+
+    def test_non_reg_user_can_add_good_to_cart(self, browser):
+        page = ProductPage(browser, link)
+        page.open()
+        page.non_reg_user_can_good_to_cart()
