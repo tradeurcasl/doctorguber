@@ -31,6 +31,7 @@ class TestProductCart():
         page = ProductPage(browser, link)
         page.should_buy_by_oneclick_new()
 
+    @pytest.mark.skip
     def test_reg_user_can_add_good_to_cart(self, browser):
         page = LoginPage(browser, link)
         page.open()
@@ -40,7 +41,13 @@ class TestProductCart():
         page = ProductPage(browser, link)
         page.reg_user_can_good_to_cart()
 
+    @pytest.mark.skip
     def test_non_reg_user_can_add_good_to_cart(self, browser):
         page = ProductPage(browser, link)
         page.open()
         page.non_reg_user_can_good_to_cart()
+
+    def test_non_reg_user_can_buy_item(self, browser):
+        page = ProductPage(browser, link)
+        page.open()
+        page.non_reg_user_can_buy()

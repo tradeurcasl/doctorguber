@@ -11,6 +11,7 @@ class BasePageLocators():
     REG_BUTTON = [By.CSS_SELECTOR, '#register_link_in_form']
     REG_PAGE = [By.CSS_SELECTOR, '#registration']
     POP_UP = [By.CSS_SELECTOR, 'div._wc-widget._wc-shadow._wc-position-bottom-right']
+    POOP_UP = [By.CSS_SELECTOR, 'div._wc-icon._wc-top-icon._wc-icon-close._wc-close']
     MAIL_REG = [By.CSS_SELECTOR, 'input[name="USER_EMAIL"]']
     NAME_REG = [By.CSS_SELECTOR, 'input[name="USER_NAME']
     FAM_REG = [By.CSS_SELECTOR, 'input[name="USER_LAST_NAME']
@@ -32,3 +33,14 @@ class ProductPageLocators():
     CART = [By.CSS_SELECTOR, 'button.btn.add-to-cart']
     IN_CART = [By.CSS_SELECTOR, 'span.personal-nav-cart']
     LIST_CART = [By.CSS_SELECTOR, '#basket_items_list']
+    UNREG_BUY = [By.CSS_SELECTOR, 'a.btn.by_without_reg']
+
+class BuyPageLocators():
+    FIO = [By.CSS_SELECTOR, '#ORDER_PROP_1']
+    EM = [By.CSS_SELECTOR, '#ORDER_PROP_3']
+    TEL = [By.CSS_SELECTOR, '#ORDER_PROP_2']
+    DESC = [By.CSS_SELECTOR, '#ORDER_DESCRIPTION']
+    OK = [By.CSS_SELECTOR, '#step_2_validation']
+    CONFIRM = [By.CSS_SELECTOR, '#ORDER_CONFIRM_BUTTON']
+    GOTOVO = [By.CSS_SELECTOR, '#order_form_div']
+    LOG_BUTTON = [By.CSS_SELECTOR, 'a.issue_without_reg']

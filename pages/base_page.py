@@ -16,10 +16,6 @@ class BasePage():
     def open(self):
         self.browser.get(self.url)
 
-    def product_from_popular_goods(self):
-        button = self.browser.find_element(*BasePageLocators.SOME_POP_GOOD)
-        self.browser.execute_script("window.scrollBy(0, 500);")
-        button.click()
 
     def go_to_login_page(self):
         time.sleep(1)
