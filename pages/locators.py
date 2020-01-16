@@ -26,3 +26,6 @@ class UserPageLocators():
 class ProductPageLocators():
     ONE_CLICK = [By.CSS_SELECTOR, 'button.btn.oneclick']
     SUB_ONE = [By.CSS_SELECTOR, 'button[name="web_form_submit"]']
+    NAME = [By.CSS_SELECTOR, '#name']
+    EMAIL = [By.CSS_SELECTOR, '#email']
+    PHONE = [By.CSS_SELECTOR, '#phone']
