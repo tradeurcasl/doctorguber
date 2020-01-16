@@ -3,8 +3,11 @@ Here you can see some test-cases (using OOP, Selenium+Python) for web-site docto
 This pack includes:
 1) Test_login_form:
   Page has login button✔
+  
   Login button is active ✔
+  
   Login form works✔
+  
   Registration form work ✔
 2)Test_product_page:
   1-click purchase logged-in-user ✔
