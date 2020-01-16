@@ -25,7 +25,7 @@ This pack includes:
   
   Checkout by registered user
   
-  Checkout by unregistered user
+  Checkout by unregistered user✔
   
   Recommended products work
   
