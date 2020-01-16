@@ -11,10 +11,10 @@ class LoginPage(BasePage):
 
     def should_be_login(self):
         input1 = self.browser.find_element(*BasePageLocators.USER_NAME)
-        login = 'k_n_ch@mail.ru'
+        login = 'it-manager'
         input1.send_keys(login)
         input2 = self.browser.find_element(*BasePageLocators.USER_PASS)
-        password = '159753'
+        password = 'sv8pKD8s'
         input2.send_keys(password)
         button = self.browser.find_element(*BasePageLocators.LOG_IN)
         button.click()
@@ -23,6 +23,11 @@ class LoginPage(BasePage):
     def should_be_personal(self):
         self.browser.find_element(*BasePageLocators.PERSONAL_CAB)
         assert True, "You are not log in user"
+
+    def should_be_personal_page(self):
+        bub = self.browser.find_element(*BasePageLocators.PERSONAL_CAB)
+        bub.click()
+        assert True, "Ooops, something is wrong"
 
     def should_be_registration_button(self):
         self.browser.find_element(*BasePageLocators.REG_BUTTON)

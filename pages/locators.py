@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+import random
+
 
 class BasePageLocators():
     LOG_BUTTON = [By.CSS_SELECTOR, "#layer-reg"]
@@ -13,3 +15,14 @@ class BasePageLocators():
     NAME_REG = [By.CSS_SELECTOR, 'input[name="USER_NAME']
     FAM_REG = [By.CSS_SELECTOR, 'input[name="USER_LAST_NAME']
     BUTTON_REG = [By.CSS_SELECTOR, 'button[name="Register']
+    SOME_POP_GOOD = [By.XPATH, '/html/body/section/div[1]/div/section/div/div[1]/div/div/a[1]']
+
+
+class UserPageLocators():
+    ORDERS = [By.CSS_SELECTOR, "a[href='/personal/order/']"]
+    DATE_ORDER = [By.XPATH, '/html/body/section/section/div/div[2]/div[2]/div[1]/div[2]/p' ] #не универсально
+
+
+class ProductPageLocators():
+    ONE_CLICK = [By.CSS_SELECTOR, 'button.btn.oneclick']
+    SUB_ONE = [By.CSS_SELECTOR, 'button[name="web_form_submit"]']
