@@ -19,7 +19,7 @@ This pack includes:
   
   1-click purchase unregistered user ✔
   
-  Add to cart by registered user
+  Add to cart by registered user✔
   
   Add to cart by unregistered user
   
