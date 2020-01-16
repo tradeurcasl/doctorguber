@@ -11,7 +11,7 @@ This pack includes:
   
   Login form works✔
   
-  Registration form work ✔
+  Registration form works ✔
   
 2) Test_product_page:
 
