@@ -21,7 +21,7 @@ This pack includes:
   
   Add to cart by registered user✔
   
-  Add to cart by unregistered user
+  Add to cart by unregistered user✔
   
   Checkout by registered user
   
