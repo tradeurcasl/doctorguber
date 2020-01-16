@@ -29,3 +29,6 @@ class ProductPageLocators():
     NAME = [By.CSS_SELECTOR, '#name']
     EMAIL = [By.CSS_SELECTOR, '#email']
     PHONE = [By.CSS_SELECTOR, '#phone']
+    CART = [By.CSS_SELECTOR, 'button.btn.add-to-cart']
+    IN_CART = [By.CSS_SELECTOR, 'span.personal-nav-cart']
+    LIST_CART = [By.CSS_SELECTOR, '#basket_items_list']
