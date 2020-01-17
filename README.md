@@ -27,6 +27,3 @@ This pack includes:
   
   Checkout by unregistered user✔
   
-  Recommended products work
-  
-  Previously viewed products work
