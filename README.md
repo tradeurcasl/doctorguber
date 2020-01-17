@@ -23,7 +23,7 @@ This pack includes:
   
   Add to cart by unregistered user✔
   
-  Checkout by registered user
+  Checkout by registered user ✔
   
   Checkout by unregistered user✔
   
