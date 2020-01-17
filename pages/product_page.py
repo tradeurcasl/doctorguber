@@ -99,3 +99,22 @@ class ProductPage(BasePage):
         button.click()
         self.browser.find_element(*UserPageLocators.ORDERS)
         assert True, 'Order is not right'
+
+    def reg_user_can_buy(self):
+        button = self.browser.find_element(*ProductPageLocators.CART)
+        button.click()
+        button = self.browser.find_element(*ProductPageLocators.IN_CART)
+        button.click()
+        time.sleep(2)
+        button = self.browser.find_element(*BuyPageLocators.REG_SUB)
+        button.click()
+        input4 = self.browser.find_element(*BuyPageLocators.DESC)
+        test = 'это тестовый заказ от тестировщика its.agency'
+        input4.send_keys(test)
+        button = self.browser.find_element(*BuyPageLocators.OK)
+        button.click()
+        time.sleep(3)
+        button = self.browser.find_element(*BuyPageLocators.CONFIRM)
+        button.click()
+        self.browser.find_element(*UserPageLocators.ORDERS)
+        assert True, 'Order is not right'

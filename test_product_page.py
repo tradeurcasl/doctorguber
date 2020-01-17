@@ -47,7 +47,17 @@ class TestProductCart():
         page.open()
         page.non_reg_user_can_good_to_cart()
 
+    @pytest.mark.skip
     def test_non_reg_user_can_buy_item(self, browser):
         page = ProductPage(browser, link)
         page.open()
         page.non_reg_user_can_buy()
+
+    def test_reg_user_can_buy_item(self, browser):
+        page = LoginPage(browser, link)
+        page.open()
+        page.go_to_login_page()
+        page.should_be_login()
+        page.should_be_personal()
+        page = ProductPage(browser, link)
+        page.reg_user_can_buy()

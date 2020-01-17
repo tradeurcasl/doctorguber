@@ -40,3 +40,4 @@ class BuyPageLocators():
     CONFIRM = [By.CSS_SELECTOR, '#ORDER_CONFIRM_BUTTON']
     GOTOVO = [By.CSS_SELECTOR, '#order_form_div']
     LOG_BUTTON = [By.CSS_SELECTOR, 'a.issue_without_reg']
+    REG_SUB = [By.CSS_SELECTOR, '#btn-submit-cart']
