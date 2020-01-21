@@ -13,7 +13,7 @@ This pack includes:
   
   Registration form works ✔
   
-  Search form work
+  Search form work✔
   
   Password recovery work✔
   
