@@ -19,6 +19,11 @@ class BasePageLocators():
     FORGET = [By.CSS_SELECTOR, 'a.forget']
     VYSLAT = [By.CSS_SELECTOR, "button[name='send_account_info']"]
     ZAPROS = [By.CSS_SELECTOR,'p.h1']
+    SEARCH = [By.CSS_SELECTOR, 'span.search.a']
+    SEARCH_INPUT = [By.CSS_SELECTOR, '#title-search-input']
+    FIND = [By.CSS_SELECTOR, 'button[name="s"]']
+    RESULT = [By.CSS_SELECTOR, 'div.search-page-blocks']
+
 class UserPageLocators():
     ORDERS = [By.CSS_SELECTOR, "a[href='/personal/order/']"]
 

@@ -4,6 +4,8 @@ from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from .locators import BasePageLocators
+from selenium.webdriver.common.keys import Keys
+
 import time
 
 class BasePage():
@@ -23,6 +25,8 @@ class BasePage():
         button.click()
         link = self.browser.find_element(*BasePageLocators.LOG_BUTTON)
         link.click()
+
+
 
     def go_to_cart(self, browser):
         self.browser = browser

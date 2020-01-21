@@ -66,6 +66,8 @@ class LoginPage(BasePage):
         button = self.browser.find_element(*BasePageLocators.FORGET)
         button.click()
         assert True, 'Some problems with forget password button'
+
+    def should_use_forgot_form(self):
         input1 = self.browser.find_element(*BasePageLocators.USER_NAME)
         login = 'k_n_ch@mail.ru'
         input1.send_keys(login)
@@ -74,4 +76,16 @@ class LoginPage(BasePage):
         x = self.browser.find_element(*BasePageLocators.ZAPROS)
         x = x.text
         y = 'Запрос отправлен на ваш e-mail'
-        assert x==y, 'Some problems'
+        assert x==y, 'Some problems' \
+
+    '''В зависимости он нужды, вставьте слово для поиска
+    '''
+    def should_use_search(self):
+        button = self.browser.find_element(*BasePageLocators.SEARCH)
+        button.click()
+        input1 = self.browser.find_element(*BasePageLocators.SEARCH_INPUT)
+        key = 'аппарат'
+        input1.send_keys(key)
+        button = self.browser.find_element(*BasePageLocators.FIND)
+        button.click()
+        assert self.is_element_present(*BasePageLocators.RESULT), 'There is no such item'

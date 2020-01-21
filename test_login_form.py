@@ -55,3 +55,4 @@ class TestLoginForm():
         time.sleep(1)
         page = LoginPage(browser, link)
         page.should_be_forgot_pass()
+        page.should_use_forgot_form()
