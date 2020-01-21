@@ -14,7 +14,7 @@ class LoginPage(BasePage):
         login = 'it-manager'
         input1.send_keys(login)
         input2 = self.browser.find_element(*BasePageLocators.USER_PASS)
-        password = 'sv8pKD8s' #ввести пароль перед запуском
+        password = 'ssssss' #ввести пароль перед запуском
         input2.send_keys(password)
         button = self.browser.find_element(*BasePageLocators.LOG_IN)
         button.click()
