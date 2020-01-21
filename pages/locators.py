@@ -16,7 +16,9 @@ class BasePageLocators():
     NAME_REG = [By.CSS_SELECTOR, 'input[name="USER_NAME']
     FAM_REG = [By.CSS_SELECTOR, 'input[name="USER_LAST_NAME']
     BUTTON_REG = [By.CSS_SELECTOR, 'button[name="Register']
-
+    FORGET = [By.CSS_SELECTOR, 'a.forget']
+    VYSLAT = [By.CSS_SELECTOR, "button[name='send_account_info']"]
+    ZAPROS = [By.CSS_SELECTOR,'p.h1']
 class UserPageLocators():
     ORDERS = [By.CSS_SELECTOR, "a[href='/personal/order/']"]
 

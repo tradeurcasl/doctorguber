@@ -14,7 +14,7 @@ class LoginPage(BasePage):
         login = 'it-manager'
         input1.send_keys(login)
         input2 = self.browser.find_element(*BasePageLocators.USER_PASS)
-        password = 'xxxxx' #ввести пароль перед запуском
+        password = 'sv8pKD8s' #ввести пароль перед запуском
         input2.send_keys(password)
         button = self.browser.find_element(*BasePageLocators.LOG_IN)
         button.click()
@@ -61,3 +61,17 @@ class LoginPage(BasePage):
         button = self.browser.find_element(*BasePageLocators.BUTTON_REG)
         button.click()
         assert True, "Something go wrong"
+
+    def should_be_forgot_pass(self):
+        button = self.browser.find_element(*BasePageLocators.FORGET)
+        button.click()
+        assert True, 'Some problems with forget password button'
+        input1 = self.browser.find_element(*BasePageLocators.USER_NAME)
+        login = 'k_n_ch@mail.ru'
+        input1.send_keys(login)
+        button = self.browser.find_element(*BasePageLocators.VYSLAT)
+        button.click()
+        x = self.browser.find_element(*BasePageLocators.ZAPROS)
+        x = x.text
+        y = 'Запрос отправлен на ваш e-mail'
+        assert x==y, 'Some problems'

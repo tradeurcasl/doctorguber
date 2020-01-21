@@ -13,7 +13,7 @@ class TestProductCart():
     """Так как тестовый сервер сейчас не работает, пишу для аккаунта it-manager.
     Должен работать для всех, просто изменить логин и пароль для требуемого юзера  логин пейдж
     """
-    @pytest.mark.skip
+
     def test_log_in_user_can_buy_one_click(self, browser):
         page = BasePage(browser, link)
         page.open()
@@ -24,14 +24,14 @@ class TestProductCart():
         page = ProductPage(browser, link)
         page.should_buy_by_oneclick()
 
-    @pytest.mark.skip
+
     def test_new_user_can_buy_one_click(self, browser):
         page = BasePage(browser, link)
         page.open()
         page = ProductPage(browser, link)
         page.should_buy_by_oneclick_new()
 
-    @pytest.mark.skip
+
     def test_reg_user_can_add_good_to_cart(self, browser):
         page = LoginPage(browser, link)
         page.open()
@@ -41,13 +41,13 @@ class TestProductCart():
         page = ProductPage(browser, link)
         page.reg_user_can_good_to_cart()
 
-    @pytest.mark.skip
+
     def test_non_reg_user_can_add_good_to_cart(self, browser):
         page = ProductPage(browser, link)
         page.open()
         page.non_reg_user_can_good_to_cart()
 
-    @pytest.mark.skip
+
     def test_non_reg_user_can_buy_item(self, browser):
         page = ProductPage(browser, link)
         page.open()
