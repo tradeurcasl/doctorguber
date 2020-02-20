@@ -13,11 +13,13 @@ This pack includes:
   
   Registration form works ✔
   
-  Search form work
-  
   Password recovery work✔
   
-2) Test_product_page:
+2) Test_search:
+
+   Search form work✔
+  
+3) Test_product_page:
 
   1-click purchase logged-in-user ✔
   
