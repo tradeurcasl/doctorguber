@@ -32,4 +32,9 @@ This pack includes:
   Checkout by registered user ✔
   
   Checkout by unregistered user✔
-  
+ 
+ 4) Test_only_by_order:
+ 
+ New user can buy goods only on order✔
+ 
+ Log-in user can buy goods only on order ✔
