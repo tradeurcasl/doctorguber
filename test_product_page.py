@@ -24,9 +24,8 @@ class TestProductCart():
 
 
     def test_new_user_can_buy_one_click(self, browser):
-        page = BasePage(browser, link)
-        page.open()
         page = ProductPage(browser, link)
+        page.open()
         page.should_buy_by_oneclick_new()
 
 
