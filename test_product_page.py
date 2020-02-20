@@ -1,17 +1,15 @@
 from .pages.base_page import BasePage
-from .pages.user_page import UserPage
 from .pages.login_page import LoginPage
 from .pages.product_page import ProductPage
-import time
-import pytest
+
 
 link = 'https://www.doctorguber.ru/samogonovarenie/oborudovanie/distilyatsiya/distillyator-doktor-guber/'
 """Можно подставить любой другой товар по ссылке"""
 
 
 class TestProductCart():
-    """Так как тестовый сервер сейчас не работает, пишу для аккаунта it-manager.
-    Должен работать для всех, просто изменить логин и пароль для требуемого юзера  логин пейдж
+    """Так как тестовый сервер сейчас не работает, пишу для ест-аккаунта.
+    Должен работать для всех, просто изменить логин и пароль для требуемого юзера в логин пейдж
     """
 
     def test_log_in_user_can_buy_one_click(self, browser):

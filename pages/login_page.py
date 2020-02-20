@@ -11,10 +11,10 @@ class LoginPage(BasePage):
 
     def should_be_login(self):
         input1 = self.browser.find_element(*BasePageLocators.USER_NAME)
-        login = 'it-manager'
+        login = 'k_n_ch@mail.ru'
         input1.send_keys(login)
         input2 = self.browser.find_element(*BasePageLocators.USER_PASS)
-        password = 'ssssss' #ввести пароль перед запуском
+        password = '159753' #ввести пароль перед запуском
         input2.send_keys(password)
         button = self.browser.find_element(*BasePageLocators.LOG_IN)
         button.click()

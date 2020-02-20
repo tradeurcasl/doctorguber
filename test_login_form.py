@@ -32,7 +32,7 @@ class TestLoginForm():
         pagec.should_be_login()
         time.sleep(2)
         pagec.should_be_personal()
-    @pytest.mark.skip
+    #@pytest.mark.skip
     def test_new_user_can_reg(self, browser):
         page = BasePage(browser, link)
         page.open()
@@ -47,6 +47,7 @@ class TestLoginForm():
         time.sleep(2)
         pagec.should_be_personal()
 
+    @pytest.mark.skip
     def test_user_forgot_password(self, browser):
         page = BasePage(browser, link)
         page.open()
