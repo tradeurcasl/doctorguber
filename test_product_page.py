@@ -1,26 +1,22 @@
 from .pages.base_page import BasePage
 from .pages.login_page import LoginPage
 from .pages.product_page import ProductPage
-
-
-link = 'https://www.doctorguber.ru/samogonovarenie/oborudovanie/distilyatsiya/distillyator-doktor-guber/'
-"""Можно подставить любой другой товар по ссылке"""
-
+from .settings import link
 
 class TestProductCart():
-    """Так как тестовый сервер сейчас не работает, пишу для ест-аккаунта.
-    Должен работать для всех, просто изменить логин и пароль для требуемого юзера в логин пейдж
-    """
+    """Так как тестовый сервер сейчас не работает, пишу для тест-аккаунта.
+     Должен работать для всех, просто изменить логин и пароль для требуемого юзера в settings
+     """
 
     def test_log_in_user_can_buy_one_click(self, browser):
-        page = BasePage(browser, link)
+        page = LoginPage(browser, link)
         page.open()
         page.go_to_login_page()
-        page = LoginPage(browser, link)
         page.should_be_login()
         page.should_be_personal()
         page = ProductPage(browser, link)
         page.should_buy_by_oneclick()
+
 
 
     def test_new_user_can_buy_one_click(self, browser):
@@ -58,3 +54,5 @@ class TestProductCart():
         page.should_be_personal()
         page = ProductPage(browser, link)
         page.reg_user_can_buy()
+
+

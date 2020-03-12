@@ -17,7 +17,6 @@ class ProductPage(BasePage):
         #button.click()
         button = self.browser.find_element(*ProductPageLocators.ONE_CLICK)
         button.click()
-        time.sleep(1)
         butto = self.browser.find_element(*ProductPageLocators.SUB_ONE)
         butto.click()
         alert = self.browser.switch_to.alert
@@ -56,7 +55,6 @@ class ProductPage(BasePage):
         button.click()
         button = self.browser.find_element(*ProductPageLocators.IN_CART)
         button.click()
-        time.sleep(1)
         self.browser.find_element(*ProductPageLocators.LIST_CART)
         assert True, 'There is no items'
 
@@ -65,7 +63,6 @@ class ProductPage(BasePage):
         button.click()
         button = self.browser.find_element(*ProductPageLocators.IN_CART)
         button.click()
-        time.sleep(1)
         self.browser.find_element(*ProductPageLocators.LIST_CART)
         assert True, 'There is no items'
 
@@ -79,12 +76,10 @@ class ProductPage(BasePage):
         #button.click()
         button = self.browser.find_element(*BasePageLocators.POP_UP)
         button.click()
-        time.sleep(2)
         button = self.browser.find_element(*BuyPageLocators.LOG_BUTTON)
         button.click()
         button = self.browser.find_element(*ProductPageLocators.UNREG_BUY)
         button.click()
-        time.sleep(1)
         input1 = self.browser.find_element(*BuyPageLocators.FIO)
         fio = 'Test ITS agency'
         input1.send_keys(fio)

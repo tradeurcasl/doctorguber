@@ -1,8 +1,7 @@
 from .base_page import BasePage
 from .locators import BasePageLocators
-from selenium.webdriver.support import expected_conditions as EC
-import faker
-import time
+from ..settings import login, password, email, name, key
+
 
 class LoginPage(BasePage):
     def should_be_login_button(self):
@@ -11,10 +10,8 @@ class LoginPage(BasePage):
 
     def should_be_login(self):
         input1 = self.browser.find_element(*BasePageLocators.USER_NAME)
-        login = 'k_n_ch@mail.ru'
         input1.send_keys(login)
         input2 = self.browser.find_element(*BasePageLocators.USER_PASS)
-        password = '159753' #ввести пароль перед запуском
         input2.send_keys(password)
         button = self.browser.find_element(*BasePageLocators.LOG_IN)
         button.click()
@@ -43,20 +40,12 @@ class LoginPage(BasePage):
     что это авторизовывается бот (и в чем-то он прав)'''
     def should_be_reg(self):
         input1 = self.browser.find_element(*BasePageLocators.MAIL_REG)
-        f = faker.Faker()
-        email = f.email()
         input1.send_keys(email)
-        time.sleep(1)
         input2 = self.browser.find_element(*BasePageLocators.USER_PASS)
-        password = '159753'
         input2.send_keys(password)
-        time.sleep(1)
         input3 = self.browser.find_element(*BasePageLocators.NAME_REG)
-        name = f.name()
         input3.send_keys(name)
-        time.sleep(1)
         input4 = self.browser.find_element(*BasePageLocators.FAM_REG)
-        time.sleep(1)
         input4.send_keys(name)
         button = self.browser.find_element(*BasePageLocators.BUTTON_REG)
         button.click()
@@ -69,7 +58,6 @@ class LoginPage(BasePage):
 
     def should_use_forgot_form(self):
         input1 = self.browser.find_element(*BasePageLocators.USER_NAME)
-        login = 'k_n_ch@mail.ru'
         input1.send_keys(login)
         button = self.browser.find_element(*BasePageLocators.VYSLAT)
         button.click()
@@ -84,7 +72,6 @@ class LoginPage(BasePage):
         button = self.browser.find_element(*BasePageLocators.SEARCH)
         button.click()
         input1 = self.browser.find_element(*BasePageLocators.SEARCH_INPUT)
-        key = 'аппарат'
         input1.send_keys(key)
         button = self.browser.find_element(*BasePageLocators.FIND)
         button.click()
