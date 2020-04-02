@@ -20,9 +20,6 @@ class BasePage():
 
 
     def go_to_login_page(self):
-        time.sleep(1)
-        button = self.browser.find_element(*BasePageLocators.POP_UP)
-        button.click()
         link = self.browser.find_element(*BasePageLocators.LOG_BUTTON)
         link.click()
 

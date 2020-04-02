@@ -48,3 +48,12 @@ class BuyPageLocators():
     GOTOVO = [By.CSS_SELECTOR, '#order_form_div']
     LOG_BUTTON = [By.CSS_SELECTOR, 'a.issue_without_reg']
     REG_SUB = [By.CSS_SELECTOR, '#btn-submit-cart']
+
+class RentPageLocators():
+    BUTTON_PAGE = [By.CSS_SELECTOR, ' div.rent__info > button']
+    NAME = [By.CSS_SELECTOR, '#rentName']
+    PHONE = [By.CSS_SELECTOR, '#rentTel']
+    EMAIL = [By.CSS_SELECTOR, '#rentEmail']
+    COMM = [By.CSS_SELECTOR, '#rentComment']
+    BUTTON_MODAL = [By.CSS_SELECTOR, 'div.rent__modal-info > button']
+    CLOSE = [By.CSS_SELECTOR, 'button.rent__modal-close']

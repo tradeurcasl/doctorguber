@@ -10,7 +10,9 @@ f = faker.Faker()
 email = f.email()
 
 al_text = 'Заявка успешно отправлена. Мы скоро свяжемся с вами (обычно, в течении 2-х часов в рабочее время).'
+
 class ProductPage(BasePage):
+
     def should_buy_by_oneclick(self):
 
         #button = self.browser.find_element(*BasePageLocators.POP_UP)
