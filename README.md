@@ -38,3 +38,9 @@ This pack includes:
  New user can buy goods only on order✔
  
  Log-in user can buy goods only on order ✔
+ 
+ 5) Test_rent_page:
+ 
+ New user can rent item ✔
+ 
+ Log-in user can rent item ✔
