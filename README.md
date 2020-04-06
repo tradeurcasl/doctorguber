@@ -1,5 +1,5 @@
 # doctorguber
-Here you can see some test-cases (using OOP, Selenium+Python) for web-site doctorguber.ru
+Here you can see some test-cases (using OOP, Selenium+Python 3.8) for web-site doctorguber.ru
 
 This pack includes:
 
